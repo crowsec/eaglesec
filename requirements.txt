@@ -1,0 +1,2 @@
+simplejson
+python3-nmap
