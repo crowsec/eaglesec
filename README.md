@@ -19,7 +19,8 @@ Install the dependencies and devDependencies and start the server.
 ```sh
 $ git clone https://github.com/crowsec/eaglesec
 $ cd eaglesec
-$ python test.py
+$ pip install -r requirements.txt
+$ python script.py
 ```
 
 ### Todos
