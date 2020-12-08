@@ -1,2 +1,4 @@
 simplejson
 python3-nmap
+wfuzz
+requests

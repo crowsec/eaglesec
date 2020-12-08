@@ -1,5 +1,6 @@
 from utils.colors import *
 import tools.nmap as nmap
+import tools.wfuzz as wfuzz
 from utils.banner import *
 
 import sys
@@ -16,6 +17,10 @@ def port_scan(host):
 	if(len(result['ports'])>0):
 		for port,data in result['ports'].items():
 			prGreen('[+] ' + str(port) + '/' + str(data['protocol']) + ' - ' + data['service'])
+			if(str(port) == "80"):
+				wfuzz.fuzz80(host)
+			elif(str(port) == "443"):
+				wfuzz.fuzz443(host)
 	else:
 		prRed('[X] Nenhuma porta aberta encontrada :(')
 
@@ -31,6 +36,7 @@ def main(host):
 	port_scan(host)
 	# depois detecta o S.O
 	#detect_os(host)
+	#wfuzz.fuzz443(host)
 
 
 if __name__ == "__main__":
