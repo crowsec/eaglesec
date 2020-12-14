@@ -14,6 +14,13 @@ EagleSec é uma ferramenta de Information Gathering para Pentest e CTF baseada e
 
 Bem simples:
 
+If you have not installed PyCurl you need to install first libcurl4-gnuls-dev and librtmp-dev
+
+```sh
+apt install libcurl4-gnutls-dev librtmp-dev
+pip install pycurl
+```
+
 Install the dependencies and devDependencies and start the server.
 
 ```sh
